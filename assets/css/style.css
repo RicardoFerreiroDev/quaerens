@@ -191,3 +191,56 @@ a:focus-visible { outline:2px solid var(--gold); outline-offset:5px; }
   .prose { color:black; }
   .prose a { text-decoration:none; }
 }
+
+/* ===============================================================
+   QUAERENS — portada definitiva (imágenes proporcionadas por autor)
+   No se superpone ningún pulpo: el pulpo está integrado en el logo.
+   =============================================================== */
+.visually-hidden { position:absolute!important; width:1px!important; height:1px!important;
+  padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important; border:0!important; }
+.home-hero { min-height:100vh; min-height:100svh; display:flex; align-items:center; justify-content:stretch; }
+.home-hero-photo {
+  background-image:url('../images/portada-buceador.webp');
+  background-position:center 49%;
+  filter:none;
+}
+.home-hero-shade {
+  background: linear-gradient(90deg, rgba(3,21,31,.05) 0%, rgba(2,20,30,.04) 26%,
+                                  rgba(2,19,29,.25) 57%,rgba(3,18,28,.36) 100%),
+              linear-gradient(180deg,rgba(2,17,26,.44) 0%, transparent 23%,
+                                  transparent 55%,rgba(0,14,22,.66) 100%);
+}
+.home-content { max-width:none; width:100%; flex:1; margin:0; display:flex; align-items:center;
+  justify-content:flex-end; padding:9rem clamp(2rem,5.2vw,5rem) 6rem; }
+.home-identity { width:min(57vw,860px); margin:0; text-align:center; position:relative; }
+.home-kicker { color:rgba(245,236,218,.86); letter-spacing:.25em;
+  font-size:clamp(.56rem,.75vw,.71rem); margin:0 0 1.25rem; }
+.home-wordmark { display:block; width:100%; min-height:0; margin:0 auto;
+  isolation:auto; position:relative; }
+.home-custom-logo { width:100%; height:auto; display:block; margin:0 auto;
+  filter:drop-shadow(0 13px 18px rgba(0,11,18,.24)); }
+.home-thought { margin:clamp(.7rem,2vw,1.6rem) 0 0; font-size:clamp(1.05rem,1.65vw,1.65rem);
+  font-weight:400; font-style:italic; letter-spacing:.015em;
+  text-shadow: 0 2px 16px #00111c; }
+.home-scroll { margin-top:2.5rem; }
+.brand-mark { object-fit:cover; border-radius:2px; }
+@media(max-width:900px) {
+  .home-content { padding:10rem 2rem 7rem; }
+  .home-identity { width:min(67vw,850px); }
+  .home-kicker { letter-spacing:.14em; }
+}
+@media(max-width:620px) {
+  .home-hero { min-height:760px; min-height:100svh; display:flex; align-items:flex-end; }
+  .home-hero-photo { background-position:18% center; }
+  .home-hero-shade { background:linear-gradient(180deg,rgba(2,15,23,.47) 0%,
+                  transparent 24%,rgba(0,18,28,.13) 37%,rgba(0,17,28,.76) 77%,rgba(0,13,21,.88) 100%); }
+  .home-content { max-width:none; margin:0; padding:11rem 1.25rem clamp(7rem,12vh,9rem);
+    display:block; }
+  .home-identity { width:100%; margin:0 auto; }
+  .home-kicker { font-size:.58rem; line-height:1.6; letter-spacing:.13em;
+    margin-bottom:1rem; }
+  .home-thought { font-size:1.18rem; line-height:1.4; margin-top:.7rem; }
+  .home-scroll { margin-top:1.6rem; }
+  .home-coordinates { display:none; }
+}

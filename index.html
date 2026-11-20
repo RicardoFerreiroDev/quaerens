@@ -4,22 +4,24 @@ kind: home
 ---
 <main id="contenido" class="home-main">
   <section class="home-hero" aria-labelledby="titulo-portada">
-    <div class="home-hero-photo" role="img" aria-label="Fotografía de un apneísta descendiendo bajo la superficie del océano"></div>
+    <div class="home-hero-photo" role="img" aria-label="Fotografía submarina con un buceador a la izquierda y rayos de luz entrando en el océano"></div>
     <div class="home-hero-shade" aria-hidden="true"></div>
 
     <div class="home-content">
-      <p class="home-kicker">UN ARCHIVO DE ENSAYOS, IDEAS Y CREACIONES</p>
-      <div class="home-wordmark">
-        <!-- Grabado naturalista histórico: cabeza a la izquierda, brazos sobre las letras. -->
-        <img src="{{ '/assets/images/pulpo-grabado.png' | relative_url }}" class="home-octopus" alt="" width="914" height="800" decoding="async">
-        <h1 id="titulo-portada">{{ site.title | escape }}</h1>
+      <div class="home-identity">
+        <p class="home-kicker">UN ARCHIVO DE ENSAYOS, IDEAS Y CREACIONES</p>
+        <div class="home-wordmark">
+          <!-- Logo original del usuario: pulpo y palabra integrados, sin duplicar con CSS. -->
+          <img class="home-custom-logo" src="{{ '/assets/images/quaerens-logo.png' | relative_url }}"
+               alt="" width="2048" height="682" fetchpriority="high">
+          <h1 id="titulo-portada" class="visually-hidden">{{ site.title | escape }}</h1>
+        </div>
+        <p class="home-thought">No todo lo que se busca tiene nombre.</p>
+        <a class="home-scroll" href="#explorar">Descender al archivo <span aria-hidden="true">↓</span></a>
       </div>
-      <p class="home-thought">No todo lo que se busca tiene nombre.</p>
-      <a class="home-scroll" href="#explorar">Descender al archivo <span aria-hidden="true">↓</span></a>
     </div>
-
     <span class="home-coordinates">FILOSOFÍA · INTELIGENCIA ARTIFICIAL · FRAGMENTOS</span>
-    <p class="photo-credit">Fotografía: <a href="https://unsplash.com/photos/a-freediver-descends-gracefully-into-the-deep-ocean-ISsTl6gie_c" target="_blank" rel="noopener noreferrer">Ibrahim Shabil / Unsplash</a></p>
+    <!-- Foto proporcionada por el usuario: no atribuimos falsamente la autoría. -->
   </section>
 
   <section class="home-explore" id="explorar" aria-labelledby="explorar-titulo">
