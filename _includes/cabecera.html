@@ -1,0 +1,10 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title | escape }}, inicio">{{ site.title | escape }}</a>
+    <nav class="main-nav" aria-label="Secciones">
+      <a href="{{ '/filosofia/' | relative_url }}" {% if page.section == 'filosofia' or page.collection == 'filosofia' %}aria-current="page"{% endif %}>Filosofía</a>
+      <a href="{{ '/ia/' | relative_url }}" {% if page.section == 'ia' or page.collection == 'ia' %}aria-current="page"{% endif %}>IA</a>
+      <a href="{{ '/fragmentos/' | relative_url }}" {% if page.section == 'fragmentos' or page.collection == 'fragmentos' %}aria-current="page"{% endif %}>Fragmentos</a>
+    </nav>
+  </div>
+</header>

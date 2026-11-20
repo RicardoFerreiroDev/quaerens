@@ -1,0 +1,17 @@
+---
+layout: default
+kind: home
+---
+<main id="contenido" class="home-main">
+  <div class="home-content">
+    <span class="home-kicker">UN ARCHIVO DE PENSAMIENTO Y ESCRITURA</span>
+    <h1>{{ site.title | escape }}</h1>
+    <div class="home-rule" aria-hidden="true"></div>
+    <p class="home-thought">Una búsqueda sin conclusión.</p>
+  </div>
+  <nav class="home-entrances" aria-label="Explorar el archivo">
+    <a href="{{ '/filosofia/' | relative_url }}"><span class="section-numeral">I.</span> Filosofía <span aria-hidden="true">↗</span></a>
+    <a href="{{ '/ia/' | relative_url }}"><span class="section-numeral">II.</span> Inteligencia artificial <span aria-hidden="true">↗</span></a>
+    <a href="{{ '/fragmentos/' | relative_url }}"><span class="section-numeral">III.</span> Fragmentos <span aria-hidden="true">↗</span></a>
+  </nav>
+</main>

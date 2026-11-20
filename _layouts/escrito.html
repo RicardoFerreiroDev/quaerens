@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<main id="contenido" class="article-page">
+  <article class="article">
+    <header class="article-heading">
+      <time class="article-date" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%d.%m.%Y' }}</time>
+      <h1 class="article-title">{{ page.title | escape }}</h1>
+      <span class="article-rule" aria-hidden="true"></span>
+    </header>
+    <div class="article-body prose" lang="{{ page.lang | default: site.lang }}">
+      {{ content }}
+    </div>
+  </article>
+</main>

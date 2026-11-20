@@ -1,0 +1,68 @@
+# El título es provisional y se cambia aquí una única vez.
+title: "Quaerens"
+description: "Archivo de ensayos, ideas y fragmentos."
+
+# Para un repositorio USUARIO.github.io, deja baseurl vacío.
+# No necesitas configurar 'url' hasta que hayas creado la cuenta.
+url: "https://RicardoFerreiroDev.github.io"
+baseurl: "/quaerens"
+
+lang: "es"
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+collections:
+  filosofia:
+    output: true
+    permalink: /filosofia/:path/
+  ia:
+    output: true
+    permalink: /ia/:path/
+  fragmentos:
+    output: true
+    permalink: /fragmentos/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: filosofia
+    values:
+      layout: escrito
+  - scope:
+      path: ""
+      type: ia
+    values:
+      layout: escrito
+  - scope:
+      path: ""
+      type: fragmentos
+    values:
+      layout: escrito
+
+# Puedes añadir, renombrar y reordenar subtemas libremente.
+# Cada entrada debe tener un id único que coincida con 'tema' en el texto.
+temas:
+  filosofia:
+    - id: metafisica
+      nombre: "Metafísica y ontología"
+    - id: epistemologia
+      nombre: "Epistemología"
+    - id: filosofia-ciencia
+      nombre: "Filosofía de la ciencia"
+    - id: etica-existencia
+      nombre: "Ética y existencia"
+  ia:
+    - id: kge
+      nombre: "Knowledge Graph Embeddings"
+    - id: nn
+      nombre: "Redes neuronales"
+    - id: representaciones
+      nombre: "Representaciones y aprendizaje"
+
+exclude:
+  - README.md
+  - plantillas
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore

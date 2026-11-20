@@ -1,0 +1,27 @@
+---
+layout: default
+section: fragmentos
+title: Fragmentos
+---
+<main id="contenido" class="archive-main">
+  <header class="archive-header">
+    <span class="overline">III. &nbsp; EL ARCHIVO</span>
+    <h1>Fragmentos</h1>
+    <p>Palabras breves, pequeñas intuiciones, instantes conservados.</p>
+  </header>
+  <div class="archive-topics fragment-list">
+    {% assign escritos = site.fragmentos | sort: 'date' | reverse %}
+    {% if escritos.size > 0 %}
+      <ul class="entry-list">
+        {% for escrito in escritos %}
+          <li class="entry-item">
+            <a href="{{ escrito.url | relative_url }}">{{ escrito.title | escape }}</a>
+            <time datetime="{{ escrito.date | date: '%Y-%m-%d' }}">{{ escrito.date | date: '%d.%m.%Y' }}</time>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="empty-topic">Sin escritos publicados.</p>
+    {% endif %}
+  </div>
+</main>

@@ -1,0 +1,32 @@
+---
+layout: default
+section: filosofia
+title: Filosofía
+---
+<main id="contenido" class="archive-main">
+  <header class="archive-header">
+    <span class="overline">I. &nbsp; EL ARCHIVO</span>
+    <h1>Filosofía</h1>
+    <p>Ensayos alrededor de las preguntas que permanecen abiertas.</p>
+  </header>
+  <div class="archive-topics">
+    {% for tema in site.temas.filosofia %}
+      {% assign escritos = site.filosofia | where: 'tema', tema.id | sort: 'date' | reverse %}
+      <section class="topic-section">
+        <div class="topic-heading"><h2>{{ tema.nombre | escape }}</h2></div>
+        {% if escritos.size > 0 %}
+          <ul class="entry-list">
+            {% for escrito in escritos %}
+              <li class="entry-item">
+                <a href="{{ escrito.url | relative_url }}">{{ escrito.title | escape }}</a>
+                <time datetime="{{ escrito.date | date: '%Y-%m-%d' }}">{{ escrito.date | date: '%d.%m.%Y' }}</time>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="empty-topic">Sin escritos publicados.</p>
+        {% endif %}
+      </section>
+    {% endfor %}
+  </div>
+</main>
