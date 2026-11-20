@@ -3,15 +3,34 @@ layout: default
 kind: home
 ---
 <main id="contenido" class="home-main">
-  <div class="home-content">
-    <span class="home-kicker">UN ARCHIVO DE PENSAMIENTO Y ESCRITURA</span>
-    <h1>{{ site.title | escape }}</h1>
-    <div class="home-rule" aria-hidden="true"></div>
-    <p class="home-thought">Una búsqueda sin conclusión.</p>
-  </div>
-  <nav class="home-entrances" aria-label="Explorar el archivo">
-    <a href="{{ '/filosofia/' | relative_url }}"><span class="section-numeral">I.</span> Filosofía <span aria-hidden="true">↗</span></a>
-    <a href="{{ '/ia/' | relative_url }}"><span class="section-numeral">II.</span> Inteligencia artificial <span aria-hidden="true">↗</span></a>
-    <a href="{{ '/fragmentos/' | relative_url }}"><span class="section-numeral">III.</span> Fragmentos <span aria-hidden="true">↗</span></a>
-  </nav>
+  <section class="home-hero" aria-labelledby="titulo-portada">
+    <div class="home-hero-photo" role="img" aria-label="Fotografía de un apneísta descendiendo bajo la superficie del océano"></div>
+    <div class="home-hero-shade" aria-hidden="true"></div>
+
+    <div class="home-content">
+      <p class="home-kicker">UN ARCHIVO DE ENSAYOS, IDEAS Y CREACIONES</p>
+      <div class="home-wordmark">
+        <!-- Grabado naturalista histórico: cabeza a la izquierda, brazos sobre las letras. -->
+        <img src="{{ '/assets/images/pulpo-grabado.png' | relative_url }}" class="home-octopus" alt="" width="914" height="800" decoding="async">
+        <h1 id="titulo-portada">{{ site.title | escape }}</h1>
+      </div>
+      <p class="home-thought">No todo lo que se busca tiene nombre.</p>
+      <a class="home-scroll" href="#explorar">Descender al archivo <span aria-hidden="true">↓</span></a>
+    </div>
+
+    <span class="home-coordinates">FILOSOFÍA · INTELIGENCIA ARTIFICIAL · FRAGMENTOS</span>
+    <p class="photo-credit">Fotografía: <a href="https://unsplash.com/photos/a-freediver-descends-gracefully-into-the-deep-ocean-ISsTl6gie_c" target="_blank" rel="noopener noreferrer">Ibrahim Shabil / Unsplash</a></p>
+  </section>
+
+  <section class="home-explore" id="explorar" aria-labelledby="explorar-titulo">
+    <div class="home-explore-inner">
+      <p class="overline">UN ARCHIVO EN TRES PARTES</p>
+      <h2 id="explorar-titulo">El descenso comienza<br>con una pregunta.</h2>
+      <nav class="home-entrances" aria-label="Explorar el archivo">
+        <a href="{{ '/filosofia/' | relative_url }}"><span class="section-numeral">I.</span><span>Filosofía</span><span aria-hidden="true">↗</span></a>
+        <a href="{{ '/ia/' | relative_url }}"><span class="section-numeral">II.</span><span>Inteligencia artificial</span><span aria-hidden="true">↗</span></a>
+        <a href="{{ '/fragmentos/' | relative_url }}"><span class="section-numeral">III.</span><span>Fragmentos</span><span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </section>
 </main>

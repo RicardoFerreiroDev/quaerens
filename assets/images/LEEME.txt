@@ -1,0 +1,14 @@
+Esta carpeta debe contener (ambas imagenes descargadas localmente):
+
+1. buceador.jpg
+   Ibrahim Shabil / Unsplash (Unsplash License).
+   Original: https://unsplash.com/photos/a-freediver-descends-gracefully-into-the-deep-ocean-ISsTl6gie_c
+   Imagen: https://images.unsplash.com/photo-1743656620385-5afe20b69b9d?auto=format&fit=crop&w=2200&q=82
+
+2. pulpo-grabado.png
+   Grabado de Popular Science Monthly (1878-1879), autor desconocido.
+   https://commons.wikimedia.org/wiki/File:PSM_V14_D360_Octopus_or_devil_fish_octopus_vulgaris.png
+   Imagen: https://upload.wikimedia.org/wikipedia/commons/0/00/PSM_V14_D360_Octopus_or_devil_fish_octopus_vulgaris.png
+
+No se incluyen los binarios de terceros en el ZIP de cambios; se descargan
+con los comandos del README, de modo que cada imagen conserve su fuente.

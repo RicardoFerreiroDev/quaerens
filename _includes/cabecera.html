@@ -1,6 +1,9 @@
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title | escape }}, inicio">{{ site.title | escape }}</a>
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title | escape }}, inicio">
+      <img src="{{ '/assets/favicon.svg' | relative_url }}" width="32" height="32" alt="" class="brand-mark">
+      <span>{{ site.title | escape }}</span>
+    </a>
     <nav class="main-nav" aria-label="Secciones">
       <a href="{{ '/filosofia/' | relative_url }}" {% if page.section == 'filosofia' or page.collection == 'filosofia' %}aria-current="page"{% endif %}>Filosofía</a>
       <a href="{{ '/ia/' | relative_url }}" {% if page.section == 'ia' or page.collection == 'ia' %}aria-current="page"{% endif %}>IA</a>
