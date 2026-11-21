@@ -2,7 +2,7 @@
 <header class="site-header">
   <div class="header-inner">
 
-    {% unless page.url == '/' %}
+    {% unless page.kind == 'home' %}
       <a href="{{ '/' | relative_url }}"
          class="site-logo"
          aria-label="Volver a la portada">
