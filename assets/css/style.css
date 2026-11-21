@@ -244,3 +244,39 @@ a:focus-visible { outline:2px solid var(--gold); outline-offset:5px; }
   .home-scroll { margin-top:1.6rem; }
   .home-coordinates { display:none; }
 }
+
+/* ================================================
+   QUAERENS — Logo en cabeceras interiores
+   ================================================ */
+
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.site-logo img {
+  display: block;
+  height: 44px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.site-logo:hover img {
+  opacity: 0.75;
+}
+
+/* Menú alineado a la derecha */
+.main-nav {
+  margin-left: auto;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 520px) {
+  .site-logo img {
+    height: 38px;
+    max-width: 160px;
+  }
+}

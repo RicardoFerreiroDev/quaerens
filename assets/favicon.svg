@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Pulpo, emblema de Quaerens">
-  <rect width="64" height="64" rx="15" fill="#102631"/>
-  <g stroke="#eee4d1" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M32 11C20 11 19 25 20 31c1 8 7 10 12 10s11-2 12-10c1-6 0-20-12-20Z" fill="#eee4d1" stroke="none"/>
-    <path d="M23 37C14 36 9 42 9 47c0 6 8 7 9 2M27 40C22 44 19 51 23 56c3 4 8 0 6-3M31 40C29 48 29 58 34 58c5 0 5-9 3-14M40 39C46 41 51 46 54 42c3-4-2-8-5-6M43 36C53 34 58 28 54 24" stroke-width="4.3"/>
-    <circle cx="27" cy="28" r="2" fill="#102631" stroke="none"/>
-    <circle cx="38" cy="28" r="2" fill="#102631" stroke="none"/>
-  </g>
-</svg>

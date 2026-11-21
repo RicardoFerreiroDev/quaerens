@@ -1,13 +1,27 @@
+
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title | escape }}, inicio">
-      <img src="{{ '/assets/favicon.png' | relative_url }}" width="32" height="32" alt="" class="brand-mark">
-      <span>{{ site.title | escape }}</span>
-    </a>
+
+    {% unless page.url == '/' %}
+      <a href="{{ '/' | relative_url }}"
+         class="site-logo"
+         aria-label="Volver a la portada">
+        <img
+          src="{{ '/assets/images/quaerens-logo.png' | relative_url }}"
+          alt="Quaerens">
+      </a>
+    {% endunless %}
+
     <nav class="main-nav" aria-label="Secciones">
-      <a href="{{ '/filosofia/' | relative_url }}" {% if page.section == 'filosofia' or page.collection == 'filosofia' %}aria-current="page"{% endif %}>Filosofía</a>
-      <a href="{{ '/ia/' | relative_url }}" {% if page.section == 'ia' or page.collection == 'ia' %}aria-current="page"{% endif %}>IA</a>
-      <a href="{{ '/fragmentos/' | relative_url }}" {% if page.section == 'fragmentos' or page.collection == 'fragmentos' %}aria-current="page"{% endif %}>Fragmentos</a>
+      <a href="{{ '/filosofia/' | relative_url }}"
+         {% if page.section == 'filosofia' or page.collection == 'filosofia' %}aria-current="page"{% endif %}>Filosofía</a>
+
+      <a href="{{ '/ia/' | relative_url }}"
+         {% if page.section == 'ia' or page.collection == 'ia' %}aria-current="page"{% endif %}>IA</a>
+
+      <a href="{{ '/fragmentos/' | relative_url }}"
+         {% if page.section == 'fragmentos' or page.collection == 'fragmentos' %}aria-current="page"{% endif %}>Fragmentos</a>
     </nav>
+
   </div>
 </header>
